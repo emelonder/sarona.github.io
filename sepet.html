@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SARONA</title>
+    <link rel="stylesheet" type="text/css" href="css/sepet.css">
+</head>
+<body>
+    <ol class="steps">
+        <li class="step step-active">
+            <a href="#">
+                <span>Sepet</span>
+            </a>
+        </li>
+        <li class="step step-inactive">
+            <a href="#">
+                <span>Ödeme</span>
+            </a>
+        </li>
+        <li class="step isdisabled step-inactive">
+            <a href="">
+                <span>Siparişiniz Tamamlandı</span>
+            </a>
+        </li>
+    </ol>
+
+    <form name="teslimat-bilgileri" autocomplete="off">
+        <div class="sepet-icerigi">
+          <h5>Teslimat Bilgileri</h5>
+          <p>Lütfen teslimat için kişisel bilgilerinizi ve teslimat adres bilgilerinizi giriniz. Fatura adresiniz farklı olmayacak ise boş bırakabilirsiniz.</p>
+
+          <div class="row">
+            <div class="col-md-6">
+                <h2 class="form-signin-heading">Kişisel Bilgiler</h2>
+                <input class="form-control" type="text" name="musteri_ad" placeholder="Ad &amp; Soyad"  autocomplete="off" required=""> 
+                <input class="form-control" type="tel" name="musteri_tel" maxlength="11" placeholder="Telefon" autocomplete="off" title="Telefon numaranızın başına 0 koyarak 11 hane şeklinde giriniz." required="">        
+                <input class="form-control" type="email" name="musteri_mail" placeholder="E-Posta" autocomplete="off" required="">
+            </div>
+            <div class="col-md-6">
+                <h2 class="form-signin-heading">Adres Bilgileri</h2>
+                <textarea style="min-height:95px; min-width: 800px;" class="form-control" name="musteri_teslimat_adresi" rows="3" autocomplete="off" placeholder="Teslimat Adresi" required=""></textarea>
+
+                <select id="musteri-ilce-il" class="musteri-ilce-il" name="musteri_teslimat_adresi_ilce_il" tabindex="-1" title="">
+                    <option>İl Seçiniz</option>
+                    <option>Samsun, Atakum</option>
+                    <option>Samsun, İlkadım</option>
+                </select>
+                
+                <input style="margin:7px 0 0 0px;" class="form-control" type="text" name="musteri_teslimat_adresi_posta_kodu" placeholder="Posta Kodu" autocomplete="off" required="">
+            </div>
+          </div>
+        </div>
+      </form>
+
+
+</body>
+<script src="js/sepet.js"></script>
+</html>
