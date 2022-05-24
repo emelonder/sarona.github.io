@@ -1,0 +1,143 @@
+:root {
+  --main-trans: 0.4s;
+  --main-color: #AD8B73;
+  --card-width: 200px;
+  --card-height: 300px;
+  --card-transition-duration: 800ms;
+  --card-transition-easing: ease;
+}
+.product-container {
+  text-align: center;
+  width: 90%;
+  padding: 10px 0px;
+  margin: auto;
+}
+.product-container .main-component {
+  padding: 10px 0px;
+}
+.product-container .main-component h4{
+  text-transform: uppercase;
+}
+.giyim-product ul.product-items {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+/* .giyim-product ul.product-items li.product-item{
+    max-width: 40%;
+} */
+.giyim-product ul.product-items li.product-item {
+  margin: 20px auto;
+  position: relative;
+  min-width: 351px;
+
+}
+.giyim-product ul.product-items li.product-item:hover {
+  box-shadow: 1px 1px 5px #0000002e;
+}
+.giyim-product li figure.image-box {
+  margin: auto;
+  position: relative;
+  padding: 15px 0px;
+  max-width: 270px;
+
+
+  /* min-width: 400px; */
+}
+.giyim-product li figure.image-box img.main-image {
+  position: absolute;
+  opacity: 1;
+}
+.giyim-product li figure.image-box img.secondery {
+  margin: 0px auto;
+
+  opacity: 0;
+}
+.giyim-product li:hover figure.image-box img.secondery {
+  opacity: 1;
+}
+.giyim-product li:hover figure.image-box img.main-image {
+  opacity: 0;
+}
+.giyim-product li .product-item-info {
+  text-align: left;
+  position: relative;
+  background-color: white;
+  padding: 5px 10px;
+  z-index: 10;
+}
+.giyim-product li .product-item-info h4 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px;
+}
+.giyim-product li .product-item-info .product-old-price {
+  text-decoration: line-through;
+  color: red;
+}
+.giyim-product li .product-item-action {
+  display: flex;
+  background-color: white;
+  position: absolute;
+  padding: 20px 0px;
+  width: 100%;
+  bottom: 25px;
+  opacity: 0;
+  transition: all var(--main-trans);
+}
+.giyim-product li:hover .product-item-action {
+  z-index: 5;
+  box-shadow: 1px 1px 5px #0000002e;
+  bottom: -65px;
+  opacity: 1;
+}
+.giyim-product li .product-item-action .quick-action,
+.giyim-product li .product-item-action .choose-action {
+  height: 30px;
+  align-items: center;
+  border-radius: 15px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s, visibility 0.5s;
+  padding: 20px 20px;
+  display: flex;
+}
+.giyim-product li .product-item-action .quick-action {
+  background: rgb(195 132 48 / 82%);
+  border: 1px solid #c79b63;
+  margin: 0px 10px;
+}
+.giyim-product li .product-item-action .choose-action {
+  background: rgb(38 41 50);
+  border: 1px solid rgb(53, 58, 74);
+}
+.giyim-product li .product-item-action .quick-action:hover,
+.giyim-product li .product-item-action .choose-action:hover {
+  background-color: var(--main-color);
+  border-radius: 6px;
+}
+.giyim-product li .product-item-action a {
+  color: #eeeeee;
+}
+.giyim-product li .product-item-action a:hover {
+  text-decoration: none;
+}
+.giyim-product li.product-incremant{
+  background-color: #958f8f0d;
+
+}
+.giyim-product li .product-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.giyim-product li .product-icon i{
+  color: var(--main-color);
+  font-size: 100px;
+}
+.giyim-product li.product-incremant{
+  min-height: 450px;
+}

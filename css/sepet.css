@@ -1,0 +1,68 @@
+
+
+/** ÖDEME SAYFASI AŞAMALARI */
+.steps { user-select: none; counter-reset: steps; overflow: hidden; list-style: none; padding: 0; margin: 0!important; border-left: 1px solid #ccc; border-right: 1px solid #ccc;   }
+
+.steps .step { counter-increment: steps; background: #efefef; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; float: left; position: relative; white-space: nowrap; margin:0!important; }
+ .step:first-child:nth-last-child(1), .step:first-child:nth-last-child(1) ~ .step { width: 100%; }
+ .step:first-child:nth-last-child(2), .step:first-child:nth-last-child(2) ~ .step { width: 50%; }
+ .step:first-child:nth-last-child(3), .step:first-child:nth-last-child(3) ~ .step { width: 33.3333333333%; }
+ .step:first-child:nth-last-child(4), .step:first-child:nth-last-child(4) ~ .step { width: 25%; }
+ .step:first-child:nth-last-child(5), .step:first-child:nth-last-child(5) ~ .step { width: 20%; }
+ .step:first-child:nth-last-child(6), .step:first-child:nth-last-child(6) ~ .step { width: 16.6666666667%; }
+ .step:first-child:nth-last-child(7), .step:first-child:nth-last-child(7) ~ .step { width: 14.2857142857%; }
+ .step:first-child:nth-last-child(8), .step:first-child:nth-last-child(8) ~ .step { width: 12.5%; }
+ .step:first-child:nth-last-child(9), .step:first-child:nth-last-child(9) ~ .step { width: 11.1111111111%; }
+ .step:first-child:nth-last-child(10), .step:first-child:nth-last-child(10) ~ .step { width: 10%; }
+ .step:after {
+     width: 1.8561553006em;
+     height: 1.8561553006em;
+     position: absolute;
+     top: 0.3535533906em;
+     left: 100%;
+     transform: rotate(45deg);
+     content: '';
+     z-index: 2;
+     background: inherit;
+     border-right: 1px solid #ccc;
+     border-top: 1px solid #ccc;
+     margin-left: -0.9280776503em;
+}
+ 
+ @media (max-width: 767px) {
+     .step { width: 100% !important; border: 1px solid #ccc; border-bottom: none; padding: 0; }
+     .step:after { content: none; }
+}
+
+ @media (max-width: 767px) {
+     .step::last-child { border-bottom: 1px solid #ccc; }
+}
+
+/** * Step link */
+/*a|span*/
+ .step a { transition: 0.25s ease-out; color: #999; display: block; text-align: center; text-decoration: none; padding: 10px 0; }
+ .step a:before {
+     width: 1.5em;
+     height: 1.5em;
+     display: inline-block;
+     content: counter(steps);
+     text-align: center;
+     background: #bcbcbc;
+     border-radius: 50%;
+     color: white;
+     margin: 0 1em;
+     line-height: 1.5em;
+}
+ :not([disabled]) > .step a:hover, :not([disabled]) > .step a:focus { color: #333; }
+ @media (max-width: 767px) {
+     .step a:before { float: left;  margin-right: 0; }
+}
+
+ .step-active { background: #fff!important; }
+
+.step a { color: #bcbcbc; }
+.step-active a, .step-done a { color: #333; }
+.step a:before { background: #bcbcbc; }
+.step-active a:before, .step-done a:before { background: #735f3b!important; }
+
+
